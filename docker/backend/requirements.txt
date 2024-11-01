@@ -1,0 +1,11 @@
+azure-ai-documentintelligence==1.0.0b4
+azure-ai-formrecognizer
+langchain_openai
+langchain
+langchain-community
+python-dotenv
+openai
+requests
+Flask
+ipython
+pyodbc

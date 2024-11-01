@@ -1,0 +1,11 @@
+python-dotenv
+langchain
+openai
+requests
+langchain-community
+langgraph
+langchain-openai
+Flask
+ipython
+pyodbc
+wikipedia

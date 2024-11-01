@@ -1,0 +1,6 @@
+python-dotenv
+streamlit
+requests
+streamlit-option-menu
+streamlit
+streamlit_extras

@@ -1,0 +1,39 @@
+services:
+
+  back_app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "${BACK_FLASK_PORT}:${BACK_FLASK_PORT}"
+    env_file:
+          - ./backend/.env.local
+    networks:
+      - hacktober
+
+  front_app:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "${STREAMLIT_PORT}:${STREAMLIT_PORT}"
+    env_file:
+      - ./frontend/.env.local
+    networks:
+      - hacktober
+    depends_on:
+      - back_app
+
+  agent_app:
+    build:
+      context: ./agent
+      dockerfile: Dockerfile
+    ports:
+      - "${AGENT_FLASK_PORT}:${AGENT_FLASK_PORT}"
+    env_file:
+          - ./agent/.env.local
+    networks:
+      - hacktober
+
+networks:
+  hacktober:
